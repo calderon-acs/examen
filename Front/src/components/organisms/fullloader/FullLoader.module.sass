@@ -1,0 +1,34 @@
+%progress-spinner
+  position: fixed
+  z-index: 999
+  overflow: show
+  display: flex
+  justify-content: center
+  align-items: center
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+%progress-spinner-before
+  content: ''
+  display: block
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.progress-spinner
+  @extend %progress-spinner
+.progress-spinner-into
+  @extend %progress-spinner
+  position: absolute
+  height: 100%
+
+.progress-spinner:before
+  @extend %progress-spinner-before
+  background-color: rgba(0,0,0,0.3)
+.progress-spinner-into:before
+  @extend %progress-spinner-before
+  position: absolute
+  background-color: transparent
